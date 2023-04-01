@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PopupWithForm from './PopupWithForm.js';
 
-function EditAvatarPopup({ isOpen, onClose, onAddPlace }) {
+function AddPlacePopup({ isOpen, onClose, onAddPlace }) {
   const [cardName, setCardName] = useState('');
   const [cardLink, setCardLink] = useState('');
 
@@ -9,6 +9,11 @@ function EditAvatarPopup({ isOpen, onClose, onAddPlace }) {
     e.preventDefault();
     onAddPlace(cardName, cardLink);
   }
+
+  useEffect(() => {
+    setCardName('');
+    setCardLink('');
+}, [isOpen]);
 
   return (
     <PopupWithForm
@@ -26,4 +31,4 @@ function EditAvatarPopup({ isOpen, onClose, onAddPlace }) {
   )
 }
 
-export default EditAvatarPopup;
+export default AddPlacePopup;

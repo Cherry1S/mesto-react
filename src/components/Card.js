@@ -28,8 +28,6 @@ function Card({ card, onCardClick, onCardLike, onCardDelete }) {
     <li className="elements__card">
       {isOwn && <button className="elements__delete-button button-transparent elements__delete-button_active" type="button" onMouseDown={handleDeleteClick}><img
         src={deleteButtonImg} alt="Кнопка «Удалить»" /></button>}
-      {/* <button className="elements__delete-button button-transparent elements__delete-button_active" type="button"><img
-          src={deleteButtonImg} alt="Кнопка «Удалить»" /></button> */}
       <img className="elements__card-image" src={card.link} alt={`Изображение ${card.name}`} onMouseDown={handleClick} />
       <div className="elements__text-container">
         <h2 className="elements__card-text">{card.name}</h2>
