@@ -20,7 +20,6 @@
 .popup__submit#delete-confirm {
   margin: 38px auto 0;
 }
-
 @media screen and (max-width: 500px) {
   .popup__submit {
     min-width: 100%;
